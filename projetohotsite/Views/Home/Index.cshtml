@@ -1,0 +1,169 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Vida Saudável";
+}
+@if(null != ViewBag.Mensagem){
+    <div class="alert alert-success" role="alert">
+        <p> @ViewBag.Mensagem</p>
+    </div>
+}
+
+<h1>Iniciativa Saúde da Cidade</h1>
+<div class="row">
+    <div class="col-6" style="display: inline-block;width:50%">
+
+        <p>
+            A Agência Nacional de Proteção à Saúde estadunidense (Centers of Disease Control and Prevention — CDC) é
+            ainda mais específica quanto aos benefícios da atividade física para manter o equilíbrio e a saúde do corpo
+            e da mente.
+
+            Algumas dessas vantagens são sentidas imediatamente após praticar exercícios, especialmente, de forma
+            moderada a intensa. Por exemplo, crianças de 6 a 13 anos sentem reflexos positivos nas funções cognitivas.
+            Isso significa que as habilidades de pensamento e aprendizagem ficam aguçadas.
+
+            Já para os adultos, podem reduzir imediatamente os sentimentos relacionados à ansiedade, diminuindo o risco
+            de depressão e melhorando o sono — que você conferiu aqui ser um dos elementos fundamentais para garantir um
+            estilo de vida saudável.
+
+            O CDC recomenda, ainda, que 150 minutos por semana de atividade aeróbica diminuem o risco de o indivíduo
+            sofrer:
+
+        <ul>
+            <li>alguns tipos de câncer, como de bexiga, mama, cólon, esôfago, pulmão e estômago</li>
+            <li>aumento do colesterol ruim</li>
+            <li>derrame cerebral</li>
+            <li>diabetes tipo 2</li>
+            <li>doenças cardíacas</li>
+            <li>hipertensão</li>
+        </ul>
+        </p>
+    </div>
+
+    <div class="col-6" style="display: inline-block;width:40%">
+        <img src="img/image700x300.jpeg" alt="mulheres fazendo flexao">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-6" style="display: inline-block; width:50%">
+        <h2>Entre em contato!</h2>
+        <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+        <div class="form-group">
+            <form asp-action="Cadastrar" method="POST">
+                <div>
+                    <label asp-for="Nome" style=" display: inline-block;width: 140px;">Nome:</label>
+                    <input id="nome" asp-for="Nome" class="form-control" required />
+                </div>
+                <div>
+                    <label asp-for="Email" style=" display: inline-block;width: 140px;">Email:</label>
+                    <input id="email" asp-for="Email" class="form-control" required />
+                </div>
+                <div>
+                    <label asp-for="Mensagem" style=" display: inline-block;width: 140px;">Mensagem (opcional):</label>
+                    <textarea id="mensagem" asp-for="Mensagem" class="form-control" required></textarea>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="row">
+            <div class="col-4"> <a href="#" data-toggle="modal" data-target="#exampleModalCenter"> <img
+                        src="img/calendar.png" width="30" height="30" alt="calendario">Agenda
+                    de eventos</a></div>
+            <div class="col-4"> <a href="#" data-toggle="modal" data-target="#example2ModalCenter"><img
+                        src="img/lampada.png" width="30" height="30" alt="lampada"> Dicas de
+                    vida saudável</a></div>
+            <div class="col-4"> <a href="#" data-toggle="modal" data-target="#example3ModalCenter"><img
+                        src="img/pessoas.png" width="30" height="30" alt="pessoas">
+                    Apoiadores</a></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Agenda de eventos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Evento 1
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="example2ModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Dicas de vida saudavel</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        1. UMA VIDA SAUDÁVEL COMEÇA COM A ALIMENTAÇÃO BALANCEADA
+                        Mesmo que sua rotina seja cheia e seu tempo reduzido, é essencial que você cuide da sua
+                        alimentação. É por meio dela que você receberá os nutrientes necessários para que tenha uma vida
+                        saudável e seu corpo tenha força e energia para enfrentar o dia.
+                    </p>  
+                     <p>
+                        2. MANTENHA UMA BOA ROTINA DE SONO
+                        Repomos nossas energias durante o sono, portanto, esse é um momento essencial para um bom
+                        funcionamento do nosso corpo. Diversos hormônios importantes também são regulados e produzidos
+                        enquanto dormimos. Portanto, ter um sono regulado é um passo essencial na busca por uma vida
+                        mais saudável.
+                    </p>
+                        3. BEBA MUITA ÁGUA
+                        A água é responsável pelo transporte de nutrientes, promove a hidratação e a limpeza do
+                        organismo. Além disso, também é fundamental para os processos fisiológicos de digestão.
+
+                     <p>   
+                        4. INCLUA ALIMENTOS DETOX NA ALIMENTAÇÃO
+                        Inclua na dieta alguns alimentos que ajudam na eliminação de toxinas no organismo. Por exemplo:
+                        chá verde, alho, aminoácidos – por meio de cápsulas –, gema de ovo, limão, gengibre são ótimas
+                        opções de alimentos detox. Assim como o brócolis, couve-flor, aspargos, couve-de-bruxelas, entre
+                        outros.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="example3ModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Apoiadores</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>banco 1</li>
+                        <li>banco 2</li>
+                        <li>banco 3</li>
+                        <li>banco 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
